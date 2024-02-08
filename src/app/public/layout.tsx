@@ -6,7 +6,10 @@ export default function PublicLayout({children}: IChildren){
     const links:ILink[] = [
         {name: "Cyberware", href: "/public/cyberware"},
         {name: "Choombas", href: "/public/choombas"},
-        {name: "Distritos", href: "/public/distritos"}
+        {name: "Distritos", href: "/public/distritos"},
+        {name: "Fixers", href: "/public/fixers"},
+        {name: "Gangs", href: "/public/gangs"},
+        {name: "Corpos", href: "/public/corpos"}
       ];
 
     return(
