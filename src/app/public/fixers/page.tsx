@@ -21,6 +21,9 @@ const FixersPage = async () => {
                     <li>
                         {fixer.id}
                         {fixer.nombre}
+                        {fixer.edad}
+                        {fixer.distrito?.id}
+                        {fixer.distrito?.nombre}
                     </li>
                 ))
                 }

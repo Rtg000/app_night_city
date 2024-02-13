@@ -21,7 +21,7 @@ const DistritosPage = async () => {
                     <li>
                         {distrito.id}
                         {distrito.nombre}
-                        {/* {distrito.subdistrito} */}
+                        {distrito.subdistrito}
                         {/* {distrito.fixers} */}
                     </li>
                 ))

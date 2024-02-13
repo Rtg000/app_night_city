@@ -21,6 +21,9 @@ const ChoombasPage = async () => {
                     <li>
                         {choomba.id}
                         {choomba.nombre}
+                        {choomba.edad}
+                        {choomba.gang?.id}
+                        {choomba.gang?.nombre}
                     </li>
                 ))
                 }
