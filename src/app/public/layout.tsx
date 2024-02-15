@@ -1,4 +1,4 @@
-import { Menu } from "@/components/Navbar";
+import { Menu } from "@/components/commons/Navbar/Navbar";
 import { IChildren } from "@/interfaces/IChildren";
 import { ILink } from "@/interfaces/ILink";
 
@@ -9,7 +9,8 @@ export default function PublicLayout({children}: IChildren){
         {name: "Distritos", href: "/public/distritos"},
         {name: "Fixers", href: "/public/fixers"},
         {name: "Gangs", href: "/public/gangs"},
-        {name: "Corpos", href: "/public/corpos"}
+        {name: "Corpos", href: "/public/corpos"},
+        {name: "Test", href: "/public/test"}
       ];
 
     return(
