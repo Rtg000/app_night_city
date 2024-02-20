@@ -4,7 +4,7 @@ import { IDistrito } from "@/interfaces/IDistrito"
 const DistritosPage = async () => {
 
     async function getDistritos() {
-        const res = await fetch('http://192.168.8.71:3001/api/distrito',{cache: 'no-store'})
+        const res = await fetch('http://172.31.10.253:3001/api/distrito',{cache: 'no-store'})
         if (!res.ok) {
             throw new Error('Failed to fetch data')
         }
