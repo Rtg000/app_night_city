@@ -1,6 +1,6 @@
 import { IChildren } from "@/interfaces/IChildren";
 
-export default function CyberwareLayout({children}: IChildren){
+export default function ChoombaLayout({children}: IChildren){
     return(
         <main>
             {children}
