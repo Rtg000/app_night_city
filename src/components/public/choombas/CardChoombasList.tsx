@@ -1,7 +1,5 @@
 'use client'
 import { IChoomba } from "@/interfaces/IChoomba"
-import { getChoombas } from "@/model/dataChoomba"
-import { Card, CardHeader, CardBody } from "@nextui-org/react"
 import { FC } from "react"
 import { CardChoomba } from "./CardChoomba"
 
@@ -14,8 +12,8 @@ export const CardChoombasList:FC<Props> = ({choombas}) => {
         <section>
             {
             choombas.map((choomba) => (
-                <article>
-                    <CardChoomba key={choomba.id} choomba={choomba}/>
+                <article key={choomba.id}>
+                    <CardChoomba choomba={choomba}/>
                 </article>
             ))
             }

@@ -8,7 +8,7 @@ const links = [
   {name: "Distritos", href: "/public/distritos"}
 ];
 
-export const MenuLink = () => {
+const MenuLink = () => {
     return (
         <Navbar>
           <NavbarBrand>
@@ -17,7 +17,7 @@ export const MenuLink = () => {
           <NavbarContent className="hidden sm:flex gap-4" justify="center">
             {
               links.map((link) => (
-                <NavbarItem>
+                <NavbarItem key={link.name}>
                   <Link color="foreground" href={link.href}>
                     {link.name}
                   </Link>

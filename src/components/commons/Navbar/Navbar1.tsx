@@ -2,7 +2,7 @@
 import {  Navbar,   NavbarBrand,   NavbarContent,   NavbarItem,   NavbarMenuToggle,  NavbarMenu,  NavbarMenuItem, Button} from "@nextui-org/react";
 import Link from "next/link";
 
-export const Menu1 = () => {
+const Menu1 = () => {
     return (
         <Navbar>
           <NavbarBrand>

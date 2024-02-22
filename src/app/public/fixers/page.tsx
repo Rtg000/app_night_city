@@ -1,15 +1,8 @@
 import React from "react"
 import { IFixer } from "@/interfaces/IFixer"
+import { getFixers } from "@/model/dataFixers"
 
 const FixersPage = async () => {
-
-    async function getFixers() {
-        const res = await fetch('http://172.31.10.253:3001/api/fixer',{cache: 'no-store'})
-        if (!res.ok) {
-            throw new Error('Failed to fetch data')
-        }
-        return res.json()
-    }
 
     const fixers: IFixer[] = await getFixers()
     return(
@@ -18,7 +11,7 @@ const FixersPage = async () => {
             <ul>
                 {
                 fixers.map((fixer: IFixer) => (
-                    <li>
+                    <li key={fixer.id}>
                         {fixer.id}
                         {fixer.nombre}
                         {fixer.edad}

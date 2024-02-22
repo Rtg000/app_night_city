@@ -17,7 +17,7 @@ export const Menu:FC<Props> = ({links}) => {
           <NavbarContent className="hidden sm:flex gap-4" justify="center">
             {
               links.map((link) => (
-                <NavbarItem>
+                <NavbarItem key={link.name}>
                   <Link color="foreground" href={link.href}>
                     {link.name}
                   </Link>
