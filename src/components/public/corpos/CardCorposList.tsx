@@ -2,6 +2,7 @@
 import { ICorpo } from "@/interfaces/ICorpo";
 import { FC } from "react"
 import { CardCorpo } from "./CardCorpo"
+import Link from "next/link";
 
 interface Props {
     corpos: ICorpo[];
@@ -9,11 +10,13 @@ interface Props {
 
 export const CardCorposList:FC<Props> = ({corpos}) => {
     return(
-        <section>
+        <section className="flex flex-wrap flex-row">
             {
             corpos.map((corpo) => (
-                <article key={corpo.id}>
-                    <CardCorpo corpo={corpo}/>
+                <article key={corpo.id} className="basis-1/3 p2">
+                    <Link href={`/public/corpos/${corpo.id}`}>
+                        <CardCorpo corpo={corpo}/>
+                    </Link>
                 </article>
             ))
             }

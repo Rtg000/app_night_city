@@ -1,25 +1,15 @@
 import React from "react"
 import { IDistrito } from "@/interfaces/IDistrito"
-import { getDistritos } from "@/model/dataDistritos"
+import { CardDistritosList } from "@/components/public/distritos/CardDistritosList"
+import apiDistritos from "@/model/distritos/apiDistritos"
 
 const DistritosPage = async () => {
 
-    const distritos: IDistrito[] = await getDistritos()
+    const distritos: IDistrito[] = await apiDistritos.listar()
     return(
         <>
             <h1>Distritos</h1>
-            <ul>
-                {
-                distritos.map((distrito: IDistrito) => (
-                    <li key={distrito.id}>
-                        {distrito.id}
-                        {distrito.nombre}
-                        {distrito.subdistrito}
-                        {/* {distrito.fixers} */}
-                    </li>
-                ))
-                }
-            </ul>
+            <CardDistritosList distritos={distritos}/>
         </>
     )
 }

@@ -1,11 +1,11 @@
 import React from "react"
 import { ICorpo } from "@/interfaces/ICorpo"
-import { getCorpos } from "@/model/dataCorpos"
 import { CardCorposList } from "@/components/public/corpos/CardCorposList"
+import apiCorpos from "@/model/corpos/apiCorpos"
 
 const CorposPage = async () => {
 
-    const corpos: ICorpo[] = await getCorpos()
+    const corpos: ICorpo[] = await apiCorpos.listar()
     return(
         <>
             <h1>Corpos</h1>

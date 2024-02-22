@@ -13,7 +13,6 @@ export const CardCorpo:FC<Props> = ({corpo}) => {
                 <h4 className="font-bold text-large">{corpo.nombre}</h4>
             </CardHeader>
             <CardBody className="overflow-visible py-2">
-                <p className="text-tiny uppercase font-bold">{corpo.nombre}</p>
                 <p className="text-tiny uppercase font-bold">{corpo.id}</p>
             </CardBody>
         </Card>

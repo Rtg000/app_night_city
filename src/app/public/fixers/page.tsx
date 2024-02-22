@@ -1,26 +1,15 @@
 import React from "react"
 import { IFixer } from "@/interfaces/IFixer"
-import { getFixers } from "@/model/dataFixers"
+import apiFixers from "@/model/fixers/apiFixers"
+import { CardFixersList } from "@/components/public/fixers/CardFixersList"
 
 const FixersPage = async () => {
 
-    const fixers: IFixer[] = await getFixers()
+    const fixers: IFixer[] = await apiFixers.listar()
     return(
         <>
             <h1>Fixers</h1>
-            <ul>
-                {
-                fixers.map((fixer: IFixer) => (
-                    <li key={fixer.id}>
-                        {fixer.id}
-                        {fixer.nombre}
-                        {fixer.edad}
-                        {fixer.distrito?.id}
-                        {fixer.distrito?.nombre}
-                    </li>
-                ))
-                }
-            </ul>
+            <CardFixersList fixers={fixers}/>
         </>
     )
 }
