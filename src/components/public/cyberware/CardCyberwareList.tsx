@@ -2,6 +2,7 @@
 import { ICyberware } from "@/interfaces/ICyberware";
 import { FC } from "react"
 import { CardCyberware } from "./CardCyberware"
+import Link from "next/link";
 
 interface Props {
     cyberware: ICyberware[];
@@ -9,11 +10,13 @@ interface Props {
 
 export const CardCyberwareList:FC<Props> = ({cyberware}) => {
     return(
-        <section>
+        <section className="flex flex-wrap flex-row">
             {
             cyberware.map((cyberware) => (
-                <article key={cyberware.id}>
-                    <CardCyberware cyberware={cyberware}/>
+                <article key={cyberware.id} className="basis-1/3 p-2">
+                    <Link href={`/public/cyberware/${cyberware.id}`}>
+                        <CardCyberware cyberware={cyberware}/>
+                    </Link>
                 </article>
             ))
             }
