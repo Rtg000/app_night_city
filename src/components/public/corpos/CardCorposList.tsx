@@ -13,7 +13,7 @@ export const CardCorposList:FC<Props> = ({corpos}) => {
         <section className="flex flex-wrap flex-row">
             {
             corpos.map((corpo) => (
-                <article key={corpo.id} className="basis-1/3 p2">
+                <article key={corpo.id} className="basis-1/3 p-2">
                     <Link href={`/public/corpos/${corpo.id}`}>
                         <CardCorpo corpo={corpo}/>
                     </Link>
