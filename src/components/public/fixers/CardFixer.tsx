@@ -16,7 +16,7 @@ export const CardFixer:FC<Props> = ({fixer}) => {
             <CardBody className="overflow-visible py-2 flex flex-col flex-wrap">
                 <p className="text-tiny uppercase font-bold">{fixer.edad}</p>
                 <p className="text-tiny uppercase font-bold">{fixer.distrito?.nombre}</p>
-                {/* <Image alt="Imagen Choomba" src={choomba.img} width={300} height={300} className="object-contain"/> */}
+                <Image alt="Imagen Choomba" src={fixer.img} width={300} height={300}/>
             </CardBody>
         </Card>
     )    
