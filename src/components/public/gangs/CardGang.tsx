@@ -15,7 +15,7 @@ export const CardGang:FC<Props> = ({gang}) => {
             </CardHeader>
             <CardBody className="overflow-visible py-2 flex flex-col flex-wrap">
                 <p className="text-tiny uppercase font-bold">{gang.id}</p>
-                {/* <Image alt="Imagen Choomba" src={choomba.img} width={300} height={300} className="object-contain"/> */}
+                <Image alt="Imagen Gang" src={gang.img} width={300} height={300} className="object-contain"/>
             </CardBody>
         </Card>
     )    
