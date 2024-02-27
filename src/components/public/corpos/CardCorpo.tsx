@@ -13,7 +13,7 @@ export const CardCorpo:FC<Props> = ({corpo}) => {
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                 <h4 className="font-bold text-large">{corpo.nombre}</h4>
             </CardHeader>
-            <CardBody className="overflow-visible py-2 flex flex-col flex-wrap">
+            <CardBody className="overflow-visible py-2 flex flex-col flex-wrap justify-center">
                 <Image alt="Imagen Corpo" src={corpo.img} width={300} height={300} className="object-contain max-h-[500px] w-[500px]"/>
             </CardBody>
         </Card>

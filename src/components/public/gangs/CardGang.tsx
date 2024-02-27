@@ -13,7 +13,7 @@ export const CardGang:FC<Props> = ({gang}) => {
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                 <h4 className="font-bold text-large">{gang.nombre}</h4>
             </CardHeader>
-            <CardBody className="overflow-visible py-2 flex flex-col flex-wrap">
+            <CardBody className="overflow-visible py-2 flex flex-col flex-wrap justify-center">
                 <div className="flex overflow-hidden p-4 justify-center align-middle">
                     <Image alt="Imagen Gang" src={gang.img} width={300} height={300} className="object-contain max-h-[500px] w-[500px]"/>
                 </div>

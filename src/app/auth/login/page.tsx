@@ -1,9 +1,11 @@
+import LoginForm from "../components/LoginForm"
+
 const LoginPage = async () => {
 
     return(
-        <>
-            <h1>Login</h1>
-        </>
+        <main className="container">
+            <LoginForm/>
+        </main>
     )
 }
 
