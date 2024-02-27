@@ -8,7 +8,6 @@ const GangsPage = async () => {
     const gangs: IGang[] = await apiGangs.listar()
     return(
         <>
-            <h1>Gangs</h1>
             <CardGangsList gangs={gangs}/>
         </>
     )

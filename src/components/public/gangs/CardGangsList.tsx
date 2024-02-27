@@ -13,7 +13,7 @@ export const CardGangsList:FC<Props> = ({gangs}) => {
         <section className="flex flex-wrap flex-row">
             {
             gangs.map((gang) => (
-                <article key={gang.id} className="basis-1/3 p-2">
+                <article key={gang.id} className="basis-1/3 p-3">
                     <Link href={`/public/gangs/${gang.id}`}>
                         <CardGang gang={gang}/>
                     </Link>

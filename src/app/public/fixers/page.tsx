@@ -8,7 +8,6 @@ const FixersPage = async () => {
     const fixers: IFixer[] = await apiFixers.listar()
     return(
         <>
-            <h1>Fixers</h1>
             <CardFixersList fixers={fixers}/>
         </>
     )

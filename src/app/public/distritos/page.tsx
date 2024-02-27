@@ -8,7 +8,6 @@ const DistritosPage = async () => {
     const distritos: IDistrito[] = await apiDistritos.listar()
     return(
         <>
-            <h1>Distritos</h1>
             <CardDistritosList distritos={distritos}/>
         </>
     )

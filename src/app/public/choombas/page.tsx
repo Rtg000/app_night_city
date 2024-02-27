@@ -8,7 +8,6 @@ const ChoombasPage = async () => {
     const choombas: IChoomba[] = await apiChoombas.listar()
     return(
         <>
-            <h1>Choombas</h1>
             <CardChoombasList choombas={choombas}/>
         </>
     )

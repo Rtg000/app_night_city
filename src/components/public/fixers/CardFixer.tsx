@@ -9,14 +9,16 @@ interface Props {
 
 export const CardFixer:FC<Props> = ({fixer}) => {
     return(
-        <Card className="py-4">
+        <Card className="p-3 h-full border-1 border-yellow-300  transition ease-in-out delay-10 hover:shadow-[0_0_13px_13px_rgba(255,0,0,1)] duration-275 ...">
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                 <h4 className="font-bold text-large">{fixer.nombre}</h4>
             </CardHeader>
-            <CardBody className="overflow-visible py-2 flex flex-col flex-wrap">
+            <CardBody className="overflow-visible py-2 flex flex-col flex-wrap justify-end">
                 <p className="text-tiny uppercase font-bold">{fixer.edad}</p>
                 <p className="text-tiny uppercase font-bold">{fixer.distrito?.nombre}</p>
-                <Image alt="Imagen Fixer" src={fixer.img} width={300} height={300}/>
+                <div className="flex overflow-hidden p-4">
+                    <Image alt="Imagen Fixer" src={fixer.img} width={300} height={300} className="object-contain max-h-[500px] w-[500px]"/>
+                </div>
             </CardBody>
         </Card>
     )    

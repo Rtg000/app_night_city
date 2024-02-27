@@ -13,7 +13,7 @@ export const CardFixersList:FC<Props> = ({fixers}) => {
         <section className="flex flex-wrap flex-row">
             {
             fixers.map((fixer) => (
-                <article key={fixer.id} className="basis-1/3 p-2">
+                <article key={fixer.id} className="basis-1/3 p-3">
                     <Link href={`/public/fixers/${fixer.id}`}>
                         <CardFixer fixer={fixer}/>
                     </Link>

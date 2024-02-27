@@ -13,7 +13,7 @@ export const CardCyberwareList:FC<Props> = ({cyberware}) => {
         <section className="flex flex-wrap flex-row">
             {
             cyberware.map((cyberware) => (
-                <article key={cyberware.id} className="basis-1/3 p-2">
+                <article key={cyberware.id} className="basis-1/3 p-3">
                     <Link href={`/public/cyberware/${cyberware.id}`}>
                         <CardCyberware cyberware={cyberware}/>
                     </Link>

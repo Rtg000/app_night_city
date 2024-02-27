@@ -1,3 +1,4 @@
+import { DetailCorpo } from "@/components/public/corpos/DetailCorpo";
 import apiCorpos from "@/model/corpos/apiCorpos";
 import React from "react"
 
@@ -8,9 +9,8 @@ const CorpoPage = async ({params: {id}}: {params: {id:string}}) => {
     console.log("-------------")
     console.log(corpo)
     return(
-        <section className="container mx-auto px-4 mt-6 border min-h-screen">
-            <h1>Corpo detalle {id}</h1>
-            <h2>{corpo.nombre}</h2>
+        <section className="container mx-auto px-4 mt-6">
+            <DetailCorpo corpo={corpo}/>
         </section>
     )
 }

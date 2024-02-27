@@ -1,3 +1,4 @@
+import { DetailCyberware } from "@/components/public/cyberware/DetailCyberware";
 import apiCyberware from "@/model/cyberware/apiCyberware";
 import React from "react"
 
@@ -8,9 +9,8 @@ const CyberwPage = async ({params: {id}}: {params: {id:string}}) => {
     console.log("-------------")
     console.log(cyberware)
     return(
-        <section className="container mx-auto px-4 mt-6 border min-h-screen">
-            <h1>Cyberware detalle {id}</h1>
-            <h2>{cyberware.nombre}</h2>
+        <section className="container mx-auto px-4 mt-6">
+            <DetailCyberware cyberware={cyberware}/>
         </section>
     )
 }

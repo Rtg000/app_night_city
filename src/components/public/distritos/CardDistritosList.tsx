@@ -13,7 +13,7 @@ export const CardDistritosList:FC<Props> = ({distritos}) => {
         <section className="flex flex-wrap flex-row">
             {
             distritos.map((distrito) => (
-                <article key={distrito.id} className="basis-1/3 p-2">
+                <article key={distrito.id} className="basis-1/3 p-3">
                     <Link href={`/public/distritos/${distrito.id}`}>
                         <CardDistrito distrito={distrito}/>
                     </Link>

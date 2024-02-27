@@ -8,7 +8,6 @@ const CyberwarePage = async () => {
     const cyberware: ICyberware[] = await apiCyberware.listar()
     return(
         <> 
-            <h1>Cyberware</h1>
             <CardCyberwareList cyberware={cyberware}/>
         </>
     )

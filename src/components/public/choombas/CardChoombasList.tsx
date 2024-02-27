@@ -13,7 +13,7 @@ export const CardChoombasList:FC<Props> = ({choombas}) => {
         <section className="flex flex-wrap flex-row">
             {
             choombas.map((choomba) => (
-                <article key={choomba.id} className="basis-1/3 p-2">
+                <article key={choomba.id} className="basis-1/3 p-3">
                     <Link href={`/public/choombas/${choomba.id}`}>
                         <CardChoomba choomba={choomba}/>
                     </Link>

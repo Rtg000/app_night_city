@@ -8,7 +8,6 @@ const CorposPage = async () => {
     const corpos: ICorpo[] = await apiCorpos.listar()
     return(
         <>
-            <h1>Corpos</h1>
             <CardCorposList corpos={corpos}/>
         </>
     )
