@@ -24,6 +24,8 @@ export const DetailGang:FC<Props> = ({ gang }) => {
             <CardBody className="overflow-visible py-2 basis-1/3">
                 <h1 className="pb-3 mb-2 border-b-2 border-yellow-400">Nombre</h1>
                 <h2 className='pb-7'>{ gang.nombre }</h2>
+                <h1 className="pb-3 mb-2 border-b-2 border-yellow-400">Descripción</h1>
+                <h2 className='pb-7'>{ gang.descripcion }</h2>
             </CardBody>
         </Card>
     )
