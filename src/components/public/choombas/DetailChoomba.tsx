@@ -12,7 +12,7 @@ interface Props {
 export const DetailChoomba:FC<Props> = ({ choomba }) => {
     
     return(
-        <Card className="py-4 flex flex-row flex-nowrap border-3 border-yellow-300">
+        <Card className="py-4 flex flex-row flex-nowrap border-2 border-yellow-400">
             <CardHeader className="pb-0 pt-2 p-2 basis-1/4 flex justify-center">
                 <Image 
                     alt="Card background"

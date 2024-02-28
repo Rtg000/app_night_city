@@ -9,7 +9,7 @@ interface Props {
 
 export const CardGang:FC<Props> = ({gang}) => {
     return(
-        <Card className="p-3 h-full border-1 border-yellow-300  transition ease-in-out delay-10 hover:shadow-[0_0_13px_13px_rgba(255,0,0,1)] duration-275 ...">
+        <Card className="p-3 h-full border-1 border-yellow-400  transition ease-in-out delay-10 hover:shadow-[0_0_13px_13px_rgba(255,0,0,1)] duration-275 ...">
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                 <h4 className="font-bold text-large">{gang.nombre}</h4>
             </CardHeader>
