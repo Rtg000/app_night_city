@@ -1,6 +1,6 @@
 import { ICyberware } from "@/interfaces/ICyberware";
+import { apiBD } from "../apiBD";
 
-const apiBD = "http://172.31.10.253:3001/api";
 const apiCyberware = {
     
     listar: async (): Promise<ICyberware[]> => {

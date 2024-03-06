@@ -1,6 +1,6 @@
 import { ICorpo } from "@/interfaces/ICorpo";
+import { apiBD } from "../apiBD";
 
-const apiBD = "http://172.31.10.253:3001/api";
 const apiCorpos = {
     
     listar: async (): Promise<ICorpo[]> => {

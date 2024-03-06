@@ -1,6 +1,6 @@
 import { IFixer } from "@/interfaces/IFixer";
+import { apiBD } from "../apiBD";
 
-const apiBD = "http://172.31.10.253:3001/api";
 const apiFixers = {
     
     listar: async (): Promise<IFixer[]> => {

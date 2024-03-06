@@ -1,6 +1,6 @@
 import { IDistrito } from "@/interfaces/IDistrito";
+import { apiBD } from "../apiBD";
 
-const apiBD = "http://172.31.10.253:3001/api";
 const apiDistritos = {
     
     listar: async (): Promise<IDistrito[]> => {

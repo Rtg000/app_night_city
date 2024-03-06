@@ -1,6 +1,6 @@
 import { IGang } from "@/interfaces/IGang";
+import { apiBD } from "../apiBD";
 
-const apiBD = "http://172.31.10.253:3001/api";
 const apiGangs = {
     
     listar: async (): Promise<IGang[]> => {
