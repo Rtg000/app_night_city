@@ -26,7 +26,7 @@ export const DetailChoomba:FC<Props> = ({ choomba }) => {
                 <h2 className='pb-7'>{ choomba.nombre }</h2>
                 <h1 className="pb-3 mb-2 border-b-2 border-yellow-400">Edad</h1>
                 <h2 className='pb-7'>{ choomba.edad }</h2>
-                <h1 className="pb-3 mb-2 border-b-2 border-yellow-400">Gang</h1>
+                <h1 className="pb-3 mb-2 border-b-2 border-yellow-400">Afiliación</h1>
                 <h2 className='pb-7'>{ choomba.gang?.nombre }</h2>
             </CardBody>
         </Card>

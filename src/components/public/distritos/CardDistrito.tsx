@@ -9,13 +9,12 @@ interface Props {
 
 export const CardDistrito:FC<Props> = ({distrito}) => {
     return(
-        <Card className="py-4 border-1 border-yellow-400  transition ease-in-out delay-10 hover:shadow-[0_0_13px_13px_rgba(255,0,0,1)] duration-275 ...">
-            <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-                <h4 className="font-bold text-large">{distrito.nombre}</h4>
+        <Card className="p-3 flex flex-row flex-nowrap border-1 border-yellow-400  transition ease-in-out delay-10 hover:shadow-[0_0_13px_13px_rgba(255,0,0,1)] duration-275 ...">
+            <CardHeader className="py-1 px-3 flex-col items-start basis-1/3 justify-center">
+                <Image alt="Imagen Distrito" src={distrito.img} width={175} height={175} className="object-contain"/>
             </CardHeader>
-            <CardBody className="overflow-visible py-2 flex flex-col flex-wrap">
-                <p className="text-tiny uppercase font-bold">{distrito.subdistrito}</p>
-                {/* <Image alt="Imagen Choomba" src={choomba.img} width={300} height={300} className="object-contain"/> */}
+            <CardBody className="overflow-visible py-2 flex flex-col flex-wrap basis-2/3">
+                <h1 className="font-bold text-large">{distrito.nombre}</h1>
             </CardBody>
         </Card>
     )    

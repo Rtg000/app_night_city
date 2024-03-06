@@ -13,10 +13,12 @@ export const CardChoomba:FC<Props> = ({choomba}) => {
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                 <h1 className="font-bold text-large">{choomba.nombre}</h1>
             </CardHeader>
-            <CardBody className="overflow-visible py-2 flex flex-col flex-wrap justify-end">
-                <h3 className="text-tiny uppercase font-bold">{choomba.edad}</h3>
-                <h3 className="text-tiny uppercase font-bold">{choomba.gang?.nombre}</h3>
-                <Image alt="Imagen Choomba" src={choomba.img} width={250} height={250} className="object-contain max-h-[500px] w-[500px]"/>
+            <CardBody className="overflow-visible py-2 flex flex-col flex-wrap justify-center">
+                {/* <h3 className="text-tiny uppercase font-bold">{choomba.edad}</h3>
+                <h3 className="text-tiny uppercase font-bold">{choomba.gang?.nombre}</h3> */}
+                <div className="flex overflow-hidden p-4 justify-center align-middle">
+                    <Image alt="Imagen Choomba" src={choomba.img} width={250} height={250} className="object-contain max-h-[500px] w-[500px]"/>
+                </div>
             </CardBody>
         </Card>
     )    
