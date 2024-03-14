@@ -1,8 +1,9 @@
-import { IChoomba } from "./IChoomba";
+import { ILogin } from "./ILogin";
+import { IUser } from "./IUser";
 
 export interface IRespLogin {
     msg: string;
     status: number;
-    user: IChoomba;
+    user: IUser;
     token: string;
 }
