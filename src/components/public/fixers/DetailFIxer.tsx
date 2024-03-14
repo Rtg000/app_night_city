@@ -26,7 +26,7 @@ export const DetailFixer:FC<Props> = ({ fixer }) => {
                 <h2 className='pb-7'>{ fixer.nombre }</h2>
                 <h1 className="pb-3 mb-2 border-b-2 border-yellow-400">Edad</h1>
                 <h2 className='pb-7'>{ fixer.edad }</h2>
-                <h1 className="pb-3 mb-2 border-b-2 border-yellow-400">Gang</h1>
+                <h1 className="pb-3 mb-2 border-b-2 border-yellow-400">Distrito</h1>
                 <h2 className='pb-7'>{ fixer.distrito?.nombre }</h2>
             </CardBody>
         </Card>
