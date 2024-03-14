@@ -1,9 +1,9 @@
 import { IChildren } from "@/interfaces/IChildren";
 
-export default function ChoombasLayout({children}: IChildren){
+export default function AdminChoombasLayout({children}: IChildren){
     return(
-        <main>
+        <>
             {children}
-        </main>
+        </>
     )
 }

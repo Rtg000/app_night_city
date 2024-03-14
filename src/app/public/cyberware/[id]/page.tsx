@@ -9,7 +9,7 @@ const CyberwPage = async ({params: {id}}: {params: {id:string}}) => {
     console.log("-------------")
     console.log(cyberware)
     return(
-        <section className="container mx-auto px-4 mt-6">
+        <section className="container mx-auto p-8">
             <DetailCyberware cyberware={cyberware}/>
         </section>
     )
