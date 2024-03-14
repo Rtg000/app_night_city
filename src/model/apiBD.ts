@@ -1,1 +1,1 @@
-export const apiBD = "http://172.31.10.253:3001/api";
+export const apiBD = "http://52.71.100.127:3001/api";
