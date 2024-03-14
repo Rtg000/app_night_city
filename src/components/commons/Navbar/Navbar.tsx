@@ -11,7 +11,7 @@ interface Props {
 
 export const Menu:FC<Props> = ({links}) => {
     return (
-        <Navbar className="bg-yellow-400 text-black mb-2 w-screen">
+        <Navbar className="bg-yellow-400 text-black w-screen fixed">
           <NavbarBrand>
             <Link color="foreground" href="/">
               <Image alt="logo" src="/cyberpunk2.png" width={175} height={175}/>
