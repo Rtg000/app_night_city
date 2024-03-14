@@ -1,11 +1,11 @@
-import LoginForm from "../components/LoginForm"
+import LoginForm from "../../../components/auth/LoginForm"
 
 const LoginPage = async () => {
 
     return(
-        <main className="container">
+        <div className="container">
             <LoginForm/>
-        </main>
+        </div>
     )
 }
 
