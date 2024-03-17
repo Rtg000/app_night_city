@@ -1,13 +1,13 @@
 'use client'
 import React, { FC } from "react"
-import { IChoomba } from "@/interfaces/IChoomba";
-import { AdminChoombasModal } from "./AdminChoombasModal";
+import { ICorpo } from "@/interfaces/ICorpo";
+import { AdminCorposModal } from "./AdminCorposModal";
 
 interface Props {
-    choombas: IChoomba[];
+    corpos: ICorpo[];
 }
 
-export const AdminChoombasTabla:FC<Props> = ({choombas}) => {
+export const AdminCorposTabla:FC<Props> = ({corpos}) => {
     return(
         <>
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -23,34 +23,22 @@ export const AdminChoombasTabla:FC<Props> = ({choombas}) => {
                                 Nombre
                             </th>
                             <th scope="col" className="px-6 py-3">
-                                Edad
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                Gang
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                <AdminChoombasModal/>
+                                <AdminCorposModal/>
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                        choombas.map((choomba) => (
-                            <tr key={choomba.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                <td className="px-6 py-4">
-                                    <img alt="Imagen Choomba" src={choomba.img} width={50} height={50} className="object-contain max-h-[140px] w-[140px]"/>
-                                </td>   
+                        corpos.map((corpo) => (
+                            <tr key={corpo.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                 <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    {choomba.id}
+                                    <img alt="Imagen Corpo" src={corpo.img} width={50} height={50} className="object-contain max-h-[140px] w-[140px]"/>
                                 </th>
                                 <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    {choomba.nombre}
-                                </th>
-                                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    {choomba.edad}
+                                    {corpo.id}
                                 </th>   
                                 <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    {choomba.gang?.nombre}
+                                    {corpo.nombre}
                                 </th>
                                 <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
@@ -65,4 +53,4 @@ export const AdminChoombasTabla:FC<Props> = ({choombas}) => {
     );
 }
 
-export default AdminChoombasTabla
+export default AdminCorposTabla
