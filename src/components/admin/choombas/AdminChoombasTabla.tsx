@@ -1,13 +1,34 @@
 'use client'
-import React, { FC } from "react"
+import React, { FC, useState } from "react"
 import { IChoomba } from "@/interfaces/IChoomba";
 import { AdminChoombasModal } from "./AdminChoombasModal";
+import axios from "axios";
+import { Button } from "@nextui-org/react";
+import { apiBD } from "@/model/apiBD";
 
 interface Props {
     choombas: IChoomba[];
 }
 
 export const AdminChoombasTabla:FC<Props> = ({choombas}) => {
+    const [deleted, setDelete] = useState<string | null>(null);
+
+    const handleDelete = async (id: string) => {
+        try {
+            await axios.delete(`${apiBD}/choomba/${id}`);
+            setDelete(id);
+            window.location.reload();
+        }catch (error) {
+            console.error('Error al borrar el choomba:', error);
+        }
+    };
+
+    const confirmDelete = (id: string) => {
+        if (window.confirm('¿Desea borrar este choomba?')) {
+            handleDelete(id);
+        }
+    };
+
     return(
         <>
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -53,7 +74,8 @@ export const AdminChoombasTabla:FC<Props> = ({choombas}) => {
                                     {choomba.gang?.nombre}
                                 </th>
                                 <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                    {/* <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a> */}
+                                    <Button type="button" onClick={() => confirmDelete(choomba.id)}>Borrar</Button>
                                 </th>                           
                             </tr>
                         ))
